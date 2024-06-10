@@ -1,0 +1,45 @@
+<div class="maindiv">
+    <div class="container">
+      <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+        <div id="allDiv">
+          <h4>Register Course</h4>
+          
+          <div>
+            <label for="adminId" style="margin-left: 2%;padding-right: 2%;">Admin ID:</label>
+            <input id="adminId" formControlName="adminId" style="margin-top: 10px; padding-left: 5px;">
+            <div *ngIf="courseForm.get('adminId')?.invalid && courseForm.get('adminId')?.touched" class="error">
+              <div *ngIf="courseForm.get('adminId')?.errors?.['required']">Admin ID is required</div>
+              <div *ngIf="courseForm.get('adminId')?.errors?.['pattern']">Admin ID must be a number</div>
+            </div>
+          </div>
+          
+          <div>
+            <label for="title">Title:</label>
+            <input id="title" formControlName="title" style="margin-top: 10px; padding-right: 2%;">
+            <div *ngIf="courseForm.get('title')?.invalid && courseForm.get('title')?.touched" class="error">
+              <div *ngIf="courseForm.get('title')?.errors?.['required']">Title is required</div>
+              <div *ngIf="courseForm.get('title')?.errors?.['pattern']">Title must start with a letter and contain only letters and spaces</div>
+            </div>
+          </div>
+          
+          <div>
+            <label for="description">Description:</label>
+            <textarea id="description" formControlName="description" style="margin-top: 10px;padding-right: 3%; margin-left: 6%;"></textarea>
+            <div *ngIf="courseForm.get('description')?.invalid && courseForm.get('description')?.touched" class="error">
+              <div *ngIf="courseForm.get('description')?.errors?.['required']">Description is required</div>
+            </div>
+          </div>
+          
+          <div>
+            <label for="price">Price:</label>
+            <input id="price" formControlName="price" type="number" style="margin-top: 10px;padding-right:5px;">
+            <div *ngIf="courseForm.get('price')?.invalid && courseForm.get('price')?.touched" class="error">
+              <div *ngIf="courseForm.get('price')?.errors?.['required']">Price is required</div>
+            </div>
+          </div>
+          
+          <button type="submit" [disabled]="courseForm.invalid">Submit</button>
+          <button type="submit" routerLink="" style="margin-left: 10%;margin-top: 10px;">Cancel</button>
+  <div>    <label>    </label></div>
+    
+  

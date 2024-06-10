@@ -1,0 +1,39 @@
+.navbar {
+    background-color:  #3899fa; /* Change background color */
+  }
+  
+  #navbarSupportedContent
+  {
+    margin-left: 50%;
+  }
+  .navbar-brand {
+    color: #6c1515; 
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #000000; /* Change link text color */
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #308ddf; /* Change link text color on hover */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #000000; /* Change toggle icon color */
+  }
+  
+  /* Responsive breakpoint for navbar */
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      background-color: #d33e3e; /* Change background color for collapsed navbar */
+    }
+  
+    .navbar-nav .nav-item .nav-link {
+      color: #000000; /* Change link color in collapsed navbar */
+    }
+  
+    .navbar-toggler {
+      background-color: #000000; /* Change toggle icon background color in collapsed navbar */
+    }
+  }
+  

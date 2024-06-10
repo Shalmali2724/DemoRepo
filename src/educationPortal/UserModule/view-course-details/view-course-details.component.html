@@ -1,0 +1,41 @@
+
+<div><form [formGroup]= "userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="courseName" style="margin-left: 2%; padding-right: 2%;">Course Name:</label>
+      <input id="courseName" formControlName="courseName" style="margin-top: 10px; padding-left: 5px;">
+      <div *ngIf="userForm.get('courseName')?.invalid && userForm.get('courseName')?.touched" class="error">
+        <div *ngIf="userForm.get('courseName')?.errors?.['required']">Course name is required</div>
+      </div>
+    </div>
+    <button type="submit" >Submit</button>
+  </form>
+ </div>
+<h1 style="margin-bottom:50px">Course Details</h1>
+<table  class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+       
+      <th>courseId</th>
+      <th>adminId</th>
+      <th>title</th>
+      <th>description</th>
+      <th>price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="courseDetails.length === 0">
+      <td colspan="6">
+        You do not have add any course yet !!! Thank you.
+      </td>
+    </tr>
+    <tr *ngFor="let course of courseDetails">
+      <td>{{course.courseId}}</td>
+      <td>{{course.adminId}}</td>
+      <td>{{course.title}}</td>
+      <td>{{course.description}}</td>
+      <td>{{course.price}}</td> 
+    </tr>
+  </tbody>
+</table>
+

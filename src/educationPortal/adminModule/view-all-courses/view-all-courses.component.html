@@ -1,0 +1,30 @@
+
+<h1 style="margin-bottom:50px">Course Details</h1>
+<table border="1" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+       
+      <th>courseId</th>
+      <th>adminId</th>
+      <th>title</th>
+      <th>description</th>
+      <th>price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="courseDetails.length === 0">
+      <td colspan="6">
+        You do not have add any course yet !!! Thank you.
+      </td>
+    </tr>
+    <tr *ngFor="let course of courseDetails">
+      <td>{{ course.courseId }}</td>
+      <td>{{ course.adminId}}</td>
+      <td>{{ course.title}}</td>
+      <td>{{ course.description}}</td>
+      <td>{{ course.price}}</td> 
+      <td><button (click)="delete(course.courseId)">delete</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">PROEducation</div>
+    <div class="list-group list-group-flush">
+      <a href="" class="list-group-item list-group-item-action bg-light">Home</a>
+      <ng-container *ngIf="isLoggedIn">
+        <a href="/view/users" class="list-group-item list-group-item-action bg-light">View All Users</a>
+        <a href="/register/course" class="list-group-item list-group-item-action bg-light">Add Course</a>
+        <a href="/view/courses" class="list-group-item list-group-item-action bg-light">View Course Details</a>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <h1 class="mt-4">Page Content Here</h1>
+      <!-- Your page content goes here -->
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+
+  <h1 style="margin-bottom:50px">User Details</h1>
+  <table border="1" class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>userId</th>
+        <th>userName</th>
+        <th>Email</th>
+        <th>Location</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="userDetails.length === 0">
+        <td colspan="6">
+          You do not have any Users yet !!! Thank you.
+        </td>
+      </tr>
+      <tr *ngFor="let user of userDetails">
+        <td>{{  user.id }}</td>
+        <td>{{  user.userName}}</td>
+        <td>{{  user.email }}</td>
+        <td>{{  user.location }}</td>
+       
+        <td><button (click)="delete(user.id)">delete</button></td>
+      </tr>
+    </tbody>
+  </table>

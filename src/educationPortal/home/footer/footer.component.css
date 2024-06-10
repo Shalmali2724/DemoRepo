@@ -1,0 +1,40 @@
+
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #3899fa;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin-top: auto;
+  }
+  
+  .text-muted {
+    color: #aaadb1;
+  }
+  
+  .social-icons {
+    float: right;
+    margin-right: 40px; /* Adjust this value as needed */
+  }
+  .footer-title{
+color: black;
+font-weight: bold;
+size: 60px;
+  }
+  
+  .social-icons .social {
+    color: red;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .social-icons .social:hover {
+    color: #dc3545; /* Hover color for social icons */
+  }
+  
