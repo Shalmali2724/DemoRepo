@@ -8,15 +8,13 @@
       </div>
     </div>
     <button type="submit" >Submit</button>
-  </form>
- </div>
+ 
+ 
 <h1 style="margin-bottom:50px">Course Details</h1>
 <table  class="table table-striped">
   <thead class="thead-dark">
     <tr>
        
-      <th>courseId</th>
-      <th>adminId</th>
       <th>title</th>
       <th>description</th>
       <th>price</th>
@@ -30,12 +28,12 @@
       </td>
     </tr>
     <tr *ngFor="let course of courseDetails">
-      <td>{{course.courseId}}</td>
-      <td>{{course.adminId}}</td>
       <td>{{course.title}}</td>
       <td>{{course.description}}</td>
       <td>{{course.price}}</td> 
+      <td><button (click)="add(course.courseId)">Add to Cart</button></td>
     </tr>
   </tbody>
 </table>
-
+</form>
+</div>

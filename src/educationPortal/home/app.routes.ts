@@ -8,6 +8,8 @@ import { ViewAllUsersComponent } from '../adminModule/view-all-users/view-all-us
 import { ViewAllCoursesComponent } from '../adminModule/view-all-courses/view-all-courses.component';
 import { UserHomePageComponent } from '../UserModule/user-home-page/user-home-page.component';
 import { ViewCourseDetailsComponent } from '../UserModule/view-course-details/view-course-details.component';
+import { UserLoginPageComponent } from '../UserModule/user-login-page/user-login-page.component';
+import { ViewCartComponent } from '../UserModule/view-cart/view-cart.component';
 
 export const routes: Routes = [
 
@@ -18,7 +20,9 @@ export const routes: Routes = [
     {path: "view/users",   component:ViewAllUsersComponent},
     {path: "view/courses",   component:ViewAllCoursesComponent},
     {path:"user/home",component:UserHomePageComponent},
-    {path:"user/view/course/details",component:ViewCourseDetailsComponent}
+    {path:"user/view/course/details",component:ViewCourseDetailsComponent},
+    {path:"user/login",component:UserLoginPageComponent},
+    {path:"view/cart",component:ViewCartComponent}
 ];
 
 

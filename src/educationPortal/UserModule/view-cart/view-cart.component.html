@@ -1,0 +1,29 @@
+
+<label style="margin-top: 20px; margin-left:50%; font-weight: bold;"> <h1>Your Cart</h1> </label> 
+<button style="margin-left: 20%; margin-top: 5px;" class="btn btn-primary" (click)="Purchase()">Purchase Course</button>
+<table  class="table table-striped" style="margin-top: 20px;">
+<thead class="thead-dark">
+  <tr>
+     
+    <th>title</th>
+    <th>description</th>
+    <th>price</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngIf="courseDetails.length === 0">
+    <td colspan="6">
+      You do not have add any course in Cart  !!! Thank you.
+    </td>
+  </tr>
+  <tr *ngFor="let course of courseDetails">
+    <td>{{course.title}}</td>
+    <td>{{course.description}}</td>
+    <td>{{course.price}}</td> 
+     <td><button (click)="delete(course.courseId)">Remove</button></td>
+  </tr>
+</tbody>
+</table>
+
+
